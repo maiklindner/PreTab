@@ -113,3 +113,9 @@ The extension operates exclusively locally on your device (RAM). It deletes all 
 ### Contact & Support
 Maik Lindner  
 dev@lindner.one
+
+---
+
+### 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

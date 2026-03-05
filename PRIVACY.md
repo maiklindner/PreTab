@@ -19,7 +19,7 @@ Die Erweiterung benötigt die Berechtigung `tabs`.
 Da keine Daten erhoben werden, werden auch keine Daten an Dritte weitergegeben oder verkauft. Es findet kein Tracking und keine Analyse des Nutzerverhaltens statt.
 
 ### 4. Kontakt
-Wenn du Fragen zu dieser Datenschutzrichtlinie hast, kontaktiere mich bitte dev.privacy@lindner.one
+Wenn du Fragen zu dieser Datenschutzrichtlinie hast, kontaktiere mich bitte dev@lindner.one
 
 ---
 
@@ -44,4 +44,4 @@ The extension requires the `tabs` permission.
 Since no data is collected, no data is shared with or sold to third parties. There is no tracking or user behavior analysis.
 
 ### 4. Contact
-If you have any questions about this Privacy Policy, please contact me dev.privacy@lindner.one
+If you have any questions about this Privacy Policy, please contact me dev@lindner.one
