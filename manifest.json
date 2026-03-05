@@ -21,6 +21,15 @@
     },
     "default_title": "__MSG_extName__"
   },
+  "commands": {
+    "toggle-tab": {
+      "suggested_key": {
+        "default": "Alt+Q",
+        "mac": "Alt+Q"
+      },
+      "description": "__MSG_extActionToggle__"
+    }
+  },
   "permissions": [
     "tabs"
   ]

@@ -109,8 +109,7 @@ chrome.tabs.onReplaced.addListener((addedTabId, removedTabId) => {
   }
 });
 
-// Event: Klick auf Extension Icon
-chrome.action.onClicked.addListener((tab) => {
+function togglePreviousTab() {
   // Wir brauchen mindestens 2 Tabs in der History 
   if (tabHistory.length >= 2) {
     // Das letzte Element (index length - 1) ist der aktuelle Tab.
@@ -130,5 +129,17 @@ chrome.action.onClicked.addListener((tab) => {
     });
   } else {
     console.log("Not enough history to switch back.");
+  }
+}
+
+// Event: Klick auf Extension Icon
+chrome.action.onClicked.addListener((tab) => {
+  togglePreviousTab();
+});
+
+// Event: Shortcut-Aufruf
+chrome.commands.onCommand.addListener((command) => {
+  if (command === "toggle-tab") {
+    togglePreviousTab();
   }
 });
