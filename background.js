@@ -42,6 +42,24 @@ chrome.tabs.onActivated.addListener((activeInfo) => {
   }
 });
 
+// Event: Window focus changes (handling cross-window switching)
+chrome.windows.onFocusChanged.addListener((windowId) => {
+  if (windowId !== chrome.windows.WINDOW_ID_NONE) {
+    chrome.tabs.query({ windowId: windowId, active: true }, (tabs) => {
+      if (tabs.length > 0) {
+        const tabId = tabs[0].id;
+        
+        // Update history so the active tab of the focused window becomes the MRU
+        tabHistory = tabHistory.filter(id => id !== tabId);
+        tabHistory.push(tabId);
+        if (tabHistory.length > 50) {
+          tabHistory.shift();
+        }
+      }
+    });
+  }
+});
+
 // Event: A tab is closed
 chrome.tabs.onRemoved.addListener((tabId, removeInfo) => {
   if (unseenTabs.has(tabId)) {
@@ -92,7 +110,11 @@ chrome.tabs.onRemoved.addListener((tabId, removeInfo) => {
 function activateLastHistoryTab() {
   if (tabHistory.length > 0) {
     const lastActiveTabId = tabHistory[tabHistory.length - 1];
-    chrome.tabs.update(lastActiveTabId, { active: true }).catch(() => {
+    chrome.tabs.update(lastActiveTabId, { active: true }).then((tab) => {
+      if (tab && tab.windowId) {
+        chrome.windows.update(tab.windowId, { focused: true }).catch(() => {});
+      }
+    }).catch(() => {
       tabHistory.pop();
       activateLastHistoryTab();
     });
@@ -116,7 +138,11 @@ function togglePreviousTab() {
     // The previous element (index length - 2) is the previous tab.
     const prevTabId = tabHistory[tabHistory.length - 2];
 
-    chrome.tabs.update(prevTabId, { active: true }).catch((error) => {
+    chrome.tabs.update(prevTabId, { active: true }).then((tab) => {
+      if (tab && tab.windowId) {
+        chrome.windows.update(tab.windowId, { focused: true }).catch(() => {});
+      }
+    }).catch((error) => {
       // Cleanup if tab is gone
       console.log("Tab does not exist anymore, removing from history.");
       tabHistory = tabHistory.filter(id => id !== prevTabId);
@@ -124,7 +150,11 @@ function togglePreviousTab() {
       // If necessary, go one more back
       if (tabHistory.length >= 2) {
         const fallbackTabId = tabHistory[tabHistory.length - 2];
-        chrome.tabs.update(fallbackTabId, { active: true }).catch(() => { });
+        chrome.tabs.update(fallbackTabId, { active: true }).then((tab) => {
+          if (tab && tab.windowId) {
+            chrome.windows.update(tab.windowId, { focused: true }).catch(() => {});
+          }
+        }).catch(() => { });
       }
     });
   } else {
