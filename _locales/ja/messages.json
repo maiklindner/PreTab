@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "Pretab - 前のタブに戻る"
+    "message": "PreTab - 前のタブに戻る"
   },
   "extDescription": {
     "message": "タブを閉じると、隣のタブではなく「最後に使用したタブ」に自動的に戻ります。スマートな履歴機能で作業効率を向上させます。"

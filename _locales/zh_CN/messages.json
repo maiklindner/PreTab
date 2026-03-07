@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "Pretab - 返回上一标签页"
+    "message": "PreTab - 返回上一标签页"
   },
   "extDescription": {
     "message": "关闭当前标签页时自动返回上一个活动标签页。通过智能历史记录优化您的浏览体验。"

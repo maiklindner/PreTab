@@ -1,6 +1,6 @@
 ### ## Deutsch
 
-**Pretab** ("die Erweiterung") respektiert deine Privatsphäre. Wir sammeln, speichern oder übermitteln keinerlei persönliche Daten.
+**PreTab** ("die Erweiterung") respektiert deine Privatsphäre. Wir sammeln, speichern oder übermitteln keinerlei persönliche Daten.
 
 ### 1. Datenverarbeitung
 Die Erweiterung arbeitet ausschließlich lokal auf deinem Gerät und verarbeitet lediglich technische Identifikationsnummern (Tab-IDs), um die Navigation zu steuern.
@@ -25,7 +25,7 @@ Wenn du Fragen zu dieser Datenschutzrichtlinie hast, kontaktiere mich bitte dev@
 
 ## English
 
-**Pretab** ("the extension") respects your privacy. We do not collect, store, or transmit any personal data.
+**PreTab** ("the extension") respects your privacy. We do not collect, store, or transmit any personal data.
 
 ### 1. Data Processing
 The extension operates exclusively locally on your device and only processes technical identification numbers (Tab IDs) to manage navigation.

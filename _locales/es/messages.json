@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "Pretab - Volver a la pestaña anterior"
+    "message": "PreTab - Volver a la pestaña anterior"
   },
   "extDescription": {
     "message": "Vuelve automáticamente a la última pestaña activa al cerrar la actual. Mejora tu flujo de trabajo con un historial inteligente."

@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "Pretab - Previous Tab Switcher"
+    "message": "PreTab - Previous Tab Switcher"
   },
   "extDescription": {
     "message": "Automatically switches back to the last active tab when closing the current one. Improves workflow with a smart history queue."

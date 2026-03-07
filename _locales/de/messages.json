@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "Pretab - Zurück zum letzten Tab"
+    "message": "PreTab - Zurück zum letzten Tab"
   },
   "extDescription": {
     "message": "Springt beim Schließen eines Tabs automatisch zum zuletzt aktiven Tab zurück. Optimiert den Workflow mit intelligenter Historie."
