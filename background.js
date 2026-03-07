@@ -1,40 +1,40 @@
-// Liste für die Historie (Standard-Verhalten)
+// History list (default behavior)
 let tabHistory = [];
 
-// Set für Tabs, die im Hintergrund geöffnet und noch nicht angesehen wurden
+// Set for tabs opened in background and not yet seen
 let unseenTabs = new Set();
 
-// Flag: War der gerade aktive Tab einer aus der "Unseen"-Liste?
+// Flag: Was the currently active tab from the "unseen" list?
 let lastActiveWasUnseen = false;
 
-// Hilfsvariable: Welcher Tab wurde gerade eben erst "entdeckt"?
-// Das verhindert das Überspringen, wenn Chrome schneller ist als unser Skript.
+// Helper variable: Which tab was just "discovered"?
+// Prevents skipping if Chrome is faster than our script.
 let justAckowledgedId = null;
 
-// Event: Ein neuer Tab wird erstellt
+// Event: A new tab is created
 chrome.tabs.onCreated.addListener((tab) => {
   if (!tab.active) {
     unseenTabs.add(tab.id);
   }
 });
 
-// Event: Ein Tab wird aktiviert (angeklickt)
+// Event: A tab is activated (clicked)
 chrome.tabs.onActivated.addListener((activeInfo) => {
   const tabId = activeInfo.tabId;
 
   if (unseenTabs.has(tabId)) {
-    // Wir haben einen neuen Tab betreten
+    // Entered a new tab
     unseenTabs.delete(tabId);
     lastActiveWasUnseen = true;
-    // WICHTIG: Wir merken uns diese ID kurzzeitig
+    // IMPORTANT: Remember this ID temporarily
     justAckowledgedId = tabId;
   } else {
-    // Wir sind auf einem normalen Tab
+    // We are on a normal tab
     lastActiveWasUnseen = false;
     justAckowledgedId = null;
   }
 
-  // Standard Historien-Logik
+  // Standard history logic
   tabHistory = tabHistory.filter(id => id !== tabId);
   tabHistory.push(tabId);
   if (tabHistory.length > 50) {
@@ -42,7 +42,7 @@ chrome.tabs.onActivated.addListener((activeInfo) => {
   }
 });
 
-// Event: Ein Tab wird geschlossen
+// Event: A tab is closed
 chrome.tabs.onRemoved.addListener((tabId, removeInfo) => {
   if (unseenTabs.has(tabId)) {
     unseenTabs.delete(tabId);
@@ -50,45 +50,45 @@ chrome.tabs.onRemoved.addListener((tabId, removeInfo) => {
 
   tabHistory = tabHistory.filter(id => id !== tabId);
 
-  // Wenn wir im "Batch-Modus" waren (neue Tabs abarbeiten)
+  // If we were in "batch mode" (processing new tabs)
   if (lastActiveWasUnseen) {
 
-    // Prüfen, wo wir gerade sind
+    // Check where we are right now
     chrome.tabs.query({ currentWindow: true, active: true }, (tabs) => {
       const currentTab = tabs[0];
 
-      // FIX: Wenn der Browser automatisch schon zum nächsten "neuen" Tab gesprungen ist,
-      // dann haben wir diesen gerade in onActivated registriert (justAckowledgedId).
-      // In diesem Fall: NICHTS tun, wir sind schon genau da, wo wir hinwollten.
+      // FIX: If the browser automatically jumped to the next "new" tab,
+      // it was just registered in onActivated (justAckowledgedId).
+      // In this case: do nothing, we are exactly where we wanted to be.
       if (currentTab && currentTab.id === justAckowledgedId) {
         return;
       }
 
-      // Falls wir woanders gelandet sind (z.B. Chrome ist zum Eltern-Tab gesprungen),
-      // dann erzwingen wir den Sprung zum nächsten neuen Tab.
+      // If we landed somewhere else (e.g. Chrome jumped to parent tab),
+      // force jump to the next new tab.
       if (unseenTabs.size > 0) {
         chrome.tabs.query({ currentWindow: true }, (allTabs) => {
           const nextTab = allTabs.find(t => unseenTabs.has(t.id));
           if (nextTab) {
             chrome.tabs.update(nextTab.id, { active: true });
           } else {
-            // Keine neuen Tabs mehr im Fenster -> Historie
+            // No more new tabs in window -> History
             activateLastHistoryTab();
           }
         });
       } else {
-        // Liste leer -> Historie
+        // List empty -> History
         activateLastHistoryTab();
       }
     });
 
   } else {
-    // Standard-Verhalten
+    // Default behavior
     activateLastHistoryTab();
   }
 });
 
-// Hilfsfunktion
+// Helper function
 function activateLastHistoryTab() {
   if (tabHistory.length > 0) {
     const lastActiveTabId = tabHistory[tabHistory.length - 1];
@@ -99,7 +99,7 @@ function activateLastHistoryTab() {
   }
 }
 
-// Event: Bereinigung bei Tab-Ersetzung
+// Event: Cleanup on tab replacement
 chrome.tabs.onReplaced.addListener((addedTabId, removedTabId) => {
   tabHistory = tabHistory.filter(id => id !== removedTabId);
   tabHistory.push(addedTabId);
@@ -110,18 +110,18 @@ chrome.tabs.onReplaced.addListener((addedTabId, removedTabId) => {
 });
 
 function togglePreviousTab() {
-  // Wir brauchen mindestens 2 Tabs in der History 
+  // We need at least 2 tabs in the history 
   if (tabHistory.length >= 2) {
-    // Das letzte Element (index length - 1) ist der aktuelle Tab.
-    // Das Element davor (index length - 2) ist der vorherige Tab.
+    // The last element (index length - 1) is the current tab.
+    // The previous element (index length - 2) is the previous tab.
     const prevTabId = tabHistory[tabHistory.length - 2];
 
     chrome.tabs.update(prevTabId, { active: true }).catch((error) => {
-      // Bereinigen, falls der Tab nicht mehr da
+      // Cleanup if tab is gone
       console.log("Tab does not exist anymore, removing from history.");
       tabHistory = tabHistory.filter(id => id !== prevTabId);
 
-      // Wenn nötig, gehe einen weitere zurück
+      // If necessary, go one more back
       if (tabHistory.length >= 2) {
         const fallbackTabId = tabHistory[tabHistory.length - 2];
         chrome.tabs.update(fallbackTabId, { active: true }).catch(() => { });
@@ -132,12 +132,12 @@ function togglePreviousTab() {
   }
 }
 
-// Event: Klick auf Extension Icon
+// Event: Extension icon click
 chrome.action.onClicked.addListener((tab) => {
   togglePreviousTab();
 });
 
-// Event: Shortcut-Aufruf
+// Event: Shortcut triggered
 chrome.commands.onCommand.addListener((command) => {
   if (command === "toggle-tab") {
     togglePreviousTab();
