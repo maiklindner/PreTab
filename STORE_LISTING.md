@@ -11,7 +11,7 @@ PreTab - Previous Tab Switcher
 Automatically switches back to the last active tab when closing the current one. Improves workflow with a smart history queue.
 
 **Description:**
-PreTab is a lightweight browser extension (Manifest V3) for Microsoft Edge that improves your browsing workflow.
+PreTab is a lightweight browser extension (Manifest V3) for your browser that improves your browsing workflow.
 
 It combines two smart behaviors to keep you focused:
 1.  **MRU Switching:** Generally, when you close a tab, PreTab switches you back to your **last active tab** instead of the nearest neighbor.
@@ -35,7 +35,7 @@ PreTab - Zurück zum letzten Tab
 Springt beim Schließen eines Tabs automatisch zum zuletzt aktiven Tab zurück. Optimiert den Workflow mit intelligenter Historie.
 
 **Beschreibung:**
-PreTab ist eine schlanke Erweiterung für Microsoft Edge, die deinen Workflow verbessert.
+PreTab ist eine schlanke Erweiterung für deinen Browser, die deinen Workflow verbessert.
 
 Sie kombiniert zwei intelligente Funktionen, um dich im Fokus zu halten:
 
@@ -60,7 +60,7 @@ PreTab - Volver a la pestaña anterior
 Vuelve automáticamente a la última pestaña activa al cerrar la actual. Mejora tu flujo de trabajo con un historial inteligente.
 
 **Descripción:**
-PreTab es una extensión ligera para Microsoft Edge que mejora significativamente tu navegación. Cambia el comportamiento al cerrar pestañas para que sea más intuitivo.
+PreTab es una extensión ligera para tu navegador que mejora significativamente tu navegación. Cambia el comportamiento al cerrar pestañas para que sea más intuitivo.
 
 La extensión combina dos funciones inteligentes:
 
@@ -82,18 +82,18 @@ La extensión combina dos funciones inteligentes:
 PreTab - Retour à l'onglet précédent
 
 **Résumé (max 132 caractères):**
-Retournez automatiquement au dernier onglet actif lorsque vous fermez le courant. Améliorez votre navigation avec un historique malin.
+Retourne automatiquement au dernier onglet actif lorsque tu fermes le courant. Améliore ta navigation avec un historique malin.
 
 **Description:**
-PreTab est une extension légère pour Microsoft Edge qui optimise votre flux de travail. Elle modifie le comportement de fermeture des onglets pour le rendre plus intuitif.
+PreTab est une extension légère pour ton navigateur qui optimise ton flux de travail. Elle modifie le comportement de fermeture des onglets pour le rendre plus intuitif.
 
 L'extension combine deux fonctionnalités intelligentes :
 
-1. **Retour au dernier onglet (MRU) :** Généralement, lorsque vous fermez un onglet, le navigateur passe à l'onglet voisin. PreTab vous ramène automatiquement à l'onglet que vous utilisiez **précédemment**.
-2. **File d'attente intelligente (Smart Queue) :** Si vous ouvrez plusieurs liens en arrière-plan (par exemple pour des recherches), PreTab les détecte. Lorsque vous fermez l'un de ces nouveaux onglets, l'extension passe automatiquement au **suivant**. Ce n'est qu'une fois la file d'attente vide que vous revenez à l'onglet d'origine.
+1. **Retour au dernier onglet (MRU) :** Généralement, lorsque tu fermes un onglet, le navigateur passe à l'onglet voisin. PreTab te ramène automatiquement à l'onglet que tu utilisais **précédemment**.
+2. **File d'attente intelligente (Smart Queue) :** Si tu ouvres plusieurs liens en arrière-plan (par exemple pour des recherches), PreTab les détecte. Lorsque tu fermes l'un de ces nouveaux onglets, l'extension passe automatiquement au **suivant**. Ce n'est qu'une fois la file d'attente vide que tu reviens à l'onglet d'origine.
 
 **Fonctionnalités :**
-* **Historique intelligent :** Garde une trace de l'ordre d'activation de vos onglets.
+* **Historique intelligent :** Garde une trace de l'ordre d'activation de tes onglets.
 * **Traitement par lots :** Naviguez fluidement à travers les onglets ouverts en arrière-plan.
 * **Aucune configuration :** Installez et c'est tout.
 * **Respect de la vie privée :** Pas de suivi, pas d'analyse, pas de serveurs externes.
@@ -110,7 +110,7 @@ PreTab - Voltar à aba anterior
 Volta automaticamente para a última aba ativa ao fechar a atual. Melhora o fluxo de trabalho com histórico inteligente.
 
 **Descrição:**
-PreTab é uma extensão leve para o Microsoft Edge que melhora seu fluxo de navegação.
+PreTab é uma extensão leve para o seu navegador que melhora seu fluxo de navegação.
 
 Ela combina dois comportamentos inteligentes para manter seu foco:
 
@@ -132,12 +132,12 @@ Ela combina dois comportamentos inteligentes para manter seu foco:
 PreTab - 返回上一标签页
 
 **简介 (max 132 chars):**
-关闭当前标签页时自动返回上一个活动标签页。通过智能历史记录优化您的浏览体验。
+关闭当前标签页时自动返回上一个活动标签页。通过智能历史记录优化你的浏览体验。
 
 **详细描述:**
-PreTab 是一款适用于 Microsoft Edge 的轻量级浏览器扩展，旨在改善您的浏览工作流。
+PreTab 是一款轻量级浏览器扩展，旨在改善你的浏览工作流。
 
-它结合了两项智能功能来保持您的专注：
+它结合了两项智能功能来保持你的专注：
 
-1. **返回最近使用的标签页 (MRU):** 通常，关闭标签页时浏览器会跳转到相邻的标签页。PreTab 会自动带您回到**之前最后使用**的标签页。
-2. **智能队列 (Smart Queue):** 如果您在后台打开多个标签页（例如“在新标签页中打开链接”），PreTab 会将其识别为一个队列。当您关闭其中一个新标签页时，
+1. **返回最近使用的标签页 (MRU):** 通常，关闭标签页时浏览器会跳转到相邻的标签页。PreTab 会自动带你回到**之前最后使用**的标签页。
+2. **智能队列 (Smart Queue):** 如果你在后台打开多个标签页（例如“在新标签页中打开链接”），PreTab 会将其识别为一个队列。当你关闭其中一个新标签页时，

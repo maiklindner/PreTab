@@ -6,7 +6,7 @@
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-orange)]()
 [![Privacy](https://img.shields.io/badge/Privacy-Friendly-green)](PRIVACY.md)
 
-**PreTab** improves your browsing workflow in Microsoft Edge.
+**PreTab** improves your browsing workflow in your browser.
 
 It combines two smart behaviors to keep you focused:
 1.  **MRU Switching:** Generally, when you close a tab, PreTab switches you back to your **last active tab** instead of the nearest neighbor.
@@ -27,7 +27,7 @@ It combines two smart behaviors to keep you focused:
 
 ### PreTab - Zurück zum letzten Tab
 
-**PreTab** optimiert deinen Workflow in Microsoft Edge. Die Erweiterung kombiniert zwei intelligente Funktionen:
+**PreTab** optimiert deinen Workflow in deinem Browser. Die Erweiterung kombiniert zwei intelligente Funktionen:
 
 1.  **Zurück zum letzten Tab:** Wenn du einen Tab schließt, bringt PreTab dich automatisch zurück zu dem Tab, den du **davor zuletzt genutzt** hast.
 2.  **Intelligente Warteschlange:** Wenn du mehrere Tabs im Hintergrund öffnest (z.B. für Recherchen), erkennt PreTab das. Wenn du einen dieser neuen Tabs schließt, springt die Erweiterung automatisch zum **nächsten neuen Tab**.
@@ -39,7 +39,7 @@ It combines two smart behaviors to keep you focused:
 
 ### PreTab - Volver a la pestaña anterior
 
-**PreTab** mejora tu flujo de trabajo en Microsoft Edge combinando dos comportamientos inteligentes:
+**PreTab** mejora tu flujo de trabajo en tu navegador combinando dos comportamientos inteligentes:
 
 1.  **Volver a la última pestaña:** Al cerrar una pestaña, PreTab te lleva automáticamente a la pestaña que estabas usando **justo antes**.
 2.  **Cola Inteligente (Smart Queue):** Si abres varios enlaces en segundo plano, PreTab los reconoce. Al cerrar una de estas nuevas pestañas, saltarás automáticamente a la **siguiente pestaña nueva**.
@@ -51,10 +51,10 @@ It combines two smart behaviors to keep you focused:
 
 ### PreTab - Retour à l'onglet précédent
 
-**PreTab** optimise votre flux de travail sur Microsoft Edge en combinant deux fonctionnalités :
+**PreTab** optimise ton flux de travail sur ton navigateur en combinant deux fonctionnalités :
 
-1.  **Retour au dernier onglet :** Lorsque vous fermez un onglet, PreTab vous ramène automatiquement à l'onglet que vous utilisiez **précédemment**.
-2.  **File d'attente intelligente :** Si vous ouvrez plusieurs liens en arrière-plan, PreTab passe automatiquement au **suivant** lorsque vous fermez l'un d'eux.
+1.  **Retour au dernier onglet :** Lorsque tu fermes un onglet, PreTab te ramène automatiquement à l'onglet que tu utilisais **précédemment**.
+2.  **File d'attente intelligente :** Si tu ouvres plusieurs liens en arrière-plan, PreTab passe automatiquement au **suivant** lorsque tu fermes l'un d'eux.
 
 </details>
 
@@ -63,7 +63,7 @@ It combines two smart behaviors to keep you focused:
 
 ### PreTab - Voltar à aba anterior
 
-**PreTab** melhora seu fluxo de trabalho no Microsoft Edge combinando dois comportamentos:
+**PreTab** melhora seu fluxo de trabalho no seu navegador combinando dois comportamentos:
 
 1.  **Voltar à última aba:** O PreTab leva você automaticamente de volta para a aba que você estava usando **logo antes**.
 2.  **Fila Inteligente:** Se você abrir vários links em segundo plano, ao fechar uma dessas novas abas, ele leva você automaticamente para a **próxima aba nova**.
@@ -75,10 +75,10 @@ It combines two smart behaviors to keep you focused:
 
 ### PreTab - 返回上一标签页
 
-**PreTab** 通过两项智能功能优化您的浏览体验：
+**PreTab** 通过两项智能功能优化你的浏览体验：
 
-1.  **返回最近使用的标签页:** 关闭标签页时，自动带您回到**之前最后使用**的标签页。
-2.  **智能队列:** 如果您在后台打开多个标签页，关闭其中一个时，它会自动带您进入**下一个未读标签页**。
+1.  **返回最近使用的标签页:** 关闭标签页时，自动带你回到**之前最后使用**的标签页。
+2.  **智能队列:** 如果你在后台打开多个标签页，关闭其中一个时，它会自动带你进入**下一个未读标签页**。
 
 </details>
 
