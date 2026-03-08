@@ -1,0 +1,27 @@
+# Privacy & Data Security (Chrome Web Store Disclosure)
+
+## Single Purpose: 
+PreTab improves browser navigation by restoring your last active tab when closing the current one or following a smart history queue.
+
+## Permissions Disclosure:
+- tabs: 
+Required to monitor tab switching, opening, and closing to maintain a smart navigation history.
+
+- storage: 
+Required to store your navigation preferences (e.g., MRU vs. Queue mode) locally.
+
+Remote Code: 
+None. This extension does not use or fetch any remote code.
+
+User Data: 
+No personal data, browsing history, or identifiers are collected, stored, or transmitted.
+
+Privacy Policy: 
+https://github.com/maiklindner/PreTab/blob/main/PRIVACY.md
+
+## Test Instructions:
+1. Configuration: Defaults to MRU (Most Recently Used) mode.
+2. Open three different websites in three tabs (A, B, C).
+3. Focus on Tab A, then switch to Tab C.
+4. Close Tab C. The extension should automatically focus back on Tab A (last active) instead of Tab B.
+5. Background Queue test: Open multiple links in background, then close current tab to see it cycle through the new tabs.
