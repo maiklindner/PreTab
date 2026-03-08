@@ -1,0 +1,177 @@
+Store Listings / Store-Einträge (Plain Text Format)
+===================================================
+
+--------------------------------------------------------------------------------
+Language: English (en)
+Category: Productivity
+Edge Search Terms: Tabs, Switcher, MRU, Previous, Navigation, Workflow, Productivity
+
+Title:
+PreTab - Previous Tab Switcher
+
+Short Description (max 132 chars):
+Automatically switches back to the last active tab when closing the current one. Improves workflow with a smart history queue.
+
+Description:
+PreTab is a lightweight browser extension that improves your browsing workflow by changing how tabs behave when closed.
+
+It combines two smart behaviors to keep you focused:
+1. MRU Switching: When you close a tab, PreTab switches you back to your last active tab instead of the nearest neighbor.
+2. Smart Queue: If you open multiple tabs in the background, PreTab treats them as a queue. Closing one takes you to the next unread tab.
+
+Features:
+- Smart History: Keeps track of your tab activation order in the background.
+- Batch Processing: Automatically detects background tabs and guides you through them sequentially.
+- Zero Configuration: Install and it just works immediately.
+- Privacy Focused: No tracking, no analytics, no external servers. 100% offline.
+- Lightweight: Written in pure JavaScript with zero external dependencies.
+
+--------------------------------------------------------------------------------
+Language: German (de)
+Category: Produktivität (Productivity)
+Edge Search Terms: Tabs, Wechseln, Letzter, Navigation, Workflow, Produktivität, Browser
+
+Title:
+PreTab - Zurück zum letzten Tab
+
+Short Description (max 132 chars):
+Springt beim Schließen eines Tabs automatisch zum zuletzt aktiven Tab zurück. Optimiert den Workflow mit intelligenter Historie.
+
+Description:
+PreTab ist eine schlanke Erweiterung für deinen Browser, die deinen Workflow verbessert. Sie ändert das Verhalten des Browsers beim Schließen von Tabs, um produktiver zu sein.
+
+Sie kombiniert zwei intelligente Funktionen:
+1. Zurück zum letzten Tab: Wenn du einen Tab schließt, bringt PreTab dich automatisch zurück zu dem Tab, den du davor genutzt hast.
+2. Intelligente Warteschlange: Wenn du mehrere Tabs im Hintergrund öffnest, springt die Erweiterung beim Schließen automatisch zum nächsten neuen Tab.
+
+Funktionen:
+- Smart History: Merkt sich die Reihenfolge deiner Tab-Nutzung.
+- Stapelverarbeitung: Erkennt im Hintergrund geöffnete Tabs und führt dich nacheinander durch.
+- Keine Konfiguration: Installieren und sofort loslegen.
+- Datenschutz: Kein Tracking, keine Analyse, keine externen Server.
+- Leichtgewichtig: Reines JavaScript ohne Abhängigkeiten.
+
+--------------------------------------------------------------------------------
+Language: Spanish (es)
+Category: Productividad (Productivity)
+Edge Search Terms: Pestañas, Cambiar, Anterior, Navegación, Flujo, Productividad, MRU
+
+Title:
+PreTab - Volver a la pestaña anterior
+
+Short Description (max 132 chars):
+Vuelve automáticamente a la última pestaña activa al cerrar la actual. Mejora tu flujo de trabajo con un historial inteligente.
+
+Description:
+PreTab es una extensión ligera para tu navegador que mejora significativamente tu navegación. Cambia el comportamiento al cerrar pestañas para que sea más intuitivo.
+
+La extensión combina dos funciones:
+1. Volver a la última pestaña: Al cerrar una pestaña, PreTab te lleva automáticamente a la pestaña que estabas usando justo antes.
+2. Cola Inteligente: Si abres varios enlaces en segundo plano, al cerrar una saltarás automáticamente a la siguiente pestaña nueva.
+
+Características:
+- Historial inteligente: Recuerda el orden de tus pestañas.
+- Procesamiento en lote: Navega fluidamente por pestañas nuevas.
+- Sin configuración: Instalar y listo.
+- Privacidad total: Sin rastreo ni servidores externos.
+- Ligero: JavaScript puro sin dependencias.
+
+--------------------------------------------------------------------------------
+Language: French (fr)
+Category: Productivité (Productivity)
+Edge Search Terms: Onglets, Basculer, Précédent, Navigation, Workflow, Productivité, Navigateur
+
+Title:
+PreTab - Retour à l'onglet précédent
+
+Short Description (max 132 chars):
+Retourne automatiquement au dernier onglet actif lorsque tu fermes le courant. Améliore ta navigation avec un historique malin.
+
+Description:
+PreTab est une extension légère pour ton navigateur qui optimise ton flux de travail. Elle modifie le comportement de fermeture des onglets pour le rendre plus intuitif.
+
+L'extension combine deux fonctionnalités :
+1. Retour au dernier onglet : Lorsque tu fermes un onglet, PreTab te ramène à l'onglet que tu utilisais précédemment.
+2. File d'attente : Si tu ouvres plusieurs liens en arrière-plan, PreTab les détecte et passe automatiquement au suivant.
+
+Fonctionnalités :
+- Historique intelligent : Garde une trace de l'ordre de tes onglets.
+- Traitement par lots : Naviguez fluidement à travers les nouveaux onglets.
+- Aucune configuration : Installez et c'est tout.
+- Respect de la vie privée : Pas de suivi, 100% hors ligne.
+- Léger : Pur JavaScript, sans dépendances.
+
+--------------------------------------------------------------------------------
+Language: Portuguese - Brazil (pt_BR)
+Category: Produtividade (Productivity)
+Edge Search Terms: Abas, Alternar, Anterior, Navegação, Fluxo, Produtividade, MRU
+
+Title:
+PreTab - Voltar à aba anterior
+
+Short Description (max 132 chars):
+Volta automaticamente para a última aba ativa ao fechar a atual. Melhora o fluxo de trabalho com um histórico inteligente.
+
+Description:
+PreTab é uma extensão leve para o seu navegador que melhora seu fluxo de navegação mudando o comportamento padrão ao fechar abas.
+
+Ela combina dois comportamentos inteligentes:
+1. Voltar à última aba: Ao fechar uma aba, o PreTab leva você automaticamente de volta para a aba que você estava usando antes.
+2. Fila Inteligente: Se você abrir vários links em segundo plano, o PreTab os trata como uma fila para guiar sua leitura.
+
+Recursos:
+- Histórico Inteligente: Monitora a ordem de ativação das abas.
+- Processamento em Lote: Guia você pelas novas abas sequencialmente.
+- Zero Configuração: Instale e comece a usar.
+- Privacidade: Sem rastreamento, 100% offline.
+- Leve: JavaScript puro sem dependências.
+
+--------------------------------------------------------------------------------
+Language: Chinese - Simplified (zh_CN)
+Category: 生产力 (Productivity)
+Edge Search Terms: 标签页, 切换, 上一个, 导航, 工作流, 生产力, 历史
+
+Title:
+PreTab - 返回上一标签页
+
+Short Description (max 132 chars):
+关闭当前标签页时自动返回上一个活动标签页。通过智能历史队列优化你的浏览工作流体验。
+
+Description:
+PreTab 是一款轻量级浏览器扩展，旨在通过改变关闭标签页时的行为来改善你的浏览工作流。
+
+它结合了两项智能功能：
+1. 返回最近使用的标签页: 关闭标签页时，PreTab 会自动带你回到之前最后使用的标签页，而不是旁边的标签页。
+2. 智能队列: 如果你在后台打开多个标签页，PreTab 会将其识别为一个任务队列。
+
+功能特点:
+- 智能历史: 在后台记录你切换标签页的顺序。
+- 批量处理: 自动检测后台标签页并按顺序引导你阅读。
+- 零配置: 即装即用，无需繁琐设置。
+- 隐私保障: 没有分析跟踪，完全离线运行。
+- 轻量化: 纯 JavaScript 编写，无外部依赖。
+
+--------------------------------------------------------------------------------
+Language: Japanese (ja)
+Category: 生産性 (Productivity)
+Edge Search Terms: タブ, 切り替え, 前, ナビゲーション, ワークフロー, 生産性, 履歴
+
+Title:
+PreTab - 前のタブに戻る
+
+Short Description (max 132 chars):
+現在のタブを閉じたときに、直前にアクティブだったタブへ自動的に戻ります。スマートな履歴キューでワークフローを改善！
+
+Description:
+PreTabは、タブを閉じたときの動作を直感的に変更することで、ブラウジングのワークフローを改善する軽量な拡張機能です。
+
+2つのスマートな機能を組み合わせています：
+1. 前のタブに戻る：タブを閉じたとき、隣のタブではなく、直前まで使用していたタブに自動で戻ります。
+2. スマートキュー：バックグラウンドで複数のリンクを開いた場合、それらをキューとして認識し、順番に消化できます。
+
+機能の特徴:
+- スマートな履歴：タブの切り替え順序を記憶します。
+- バッチ処理：新しく開いたタブを自動的に順番に案内します。
+- 設定不要：インストールするだけで動作します。
+- プライバシー保護：トラッキングなし、100%オフライン。
+- 軽量：純粋なJavaScriptで書かれています。
