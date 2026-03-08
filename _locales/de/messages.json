@@ -1,11 +1,29 @@
 {
-  "extName": { "message": "PreTab" },
-  "extDesc": { "message": "Wechsle mit einem Hotkey oder beim Schließen von Tabs einfach zu deinem zuletzt aktiven Tab." },
-  "extActionToggle": { "message": "Vorherigen Tab aufrufen" },
-  "optionsTitle": { "message": "PreTab Einstellungen" },
-  "optionsDesc": { "message": "Konfiguriere das Verhalten des Hintergrundverlaufs und der Warteschlange." },
-  "optMruTitle": { "message": "Zuletzt aktiver Tab (MRU)" },
-  "optMruDesc": { "message": "Wechsle zum zuletzt aktiven Tab, wenn der aktuelle geschlossen wird." },
-  "optQueueTitle": { "message": "Hintergrund-Warteschlange" },
-  "optQueueDesc": { "message": "Behandle rekursiv geöffnete Hintergrund-Tabs als Warteschlange statt als normales MRU." }
+  "extName": {
+    "message": "PreTab"
+  },
+  "extDesc": {
+    "message": "Wechsle mit einem Hotkey oder beim Schließen von Tabs einfach zu deinem zuletzt aktiven Tab."
+  },
+  "extActionToggle": {
+    "message": "Vorherigen Tab aufrufen"
+  },
+  "optionsTitle": {
+    "message": "PreTab"
+  },
+  "optionsDesc": {
+    "message": "Konfiguriere das Verhalten des Hintergrundverlaufs und der Warteschlange."
+  },
+  "optMruTitle": {
+    "message": "Zuletzt aktiver Tab (MRU)"
+  },
+  "optMruDesc": {
+    "message": "Wechsle zum zuletzt aktiven Tab, wenn der aktuelle geschlossen wird."
+  },
+  "optQueueTitle": {
+    "message": "Hintergrund-Warteschlange"
+  },
+  "optQueueDesc": {
+    "message": "Behandle rekursiv geöffnete Hintergrund-Tabs als Warteschlange statt als normales MRU."
+  }
 }

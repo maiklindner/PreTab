@@ -1,11 +1,29 @@
 {
-  "extName": { "message": "PreTab" },
-  "extDesc": { "message": "Cambia a tu pestaña activa anterior fácilmente usando un atajo o al cerrar pestañas." },
-  "extActionToggle": { "message": "Alternar Pestaña Anterior" },
-  "optionsTitle": { "message": "Configuración de PreTab" },
-  "optionsDesc": { "message": "Configura el comportamiento del historial en segundo plano y la cola." },
-  "optMruTitle": { "message": "Última Pestaña Activa (MRU)" },
-  "optMruDesc": { "message": "Cambia a tu pestaña activa anterior al cerrar la actual." },
-  "optQueueTitle": { "message": "Cola en Segundo Plano" },
-  "optQueueDesc": { "message": "Trata las pestañas abiertas recursivamente en segundo plano como una cola en lugar del comportamiento normal MRU." }
+  "extName": {
+    "message": "PreTab"
+  },
+  "extDesc": {
+    "message": "Cambia a tu pestaña activa anterior fácilmente usando un atajo o al cerrar pestañas."
+  },
+  "extActionToggle": {
+    "message": "Alternar Pestaña Anterior"
+  },
+  "optionsTitle": {
+    "message": "PreTab"
+  },
+  "optionsDesc": {
+    "message": "Configura el comportamiento del historial en segundo plano y la cola."
+  },
+  "optMruTitle": {
+    "message": "Última Pestaña Activa (MRU)"
+  },
+  "optMruDesc": {
+    "message": "Cambia a tu pestaña activa anterior al cerrar la actual."
+  },
+  "optQueueTitle": {
+    "message": "Cola en Segundo Plano"
+  },
+  "optQueueDesc": {
+    "message": "Trata las pestañas abiertas recursivamente en segundo plano como una cola en lugar del comportamiento normal MRU."
+  }
 }

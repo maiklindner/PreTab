@@ -1,11 +1,29 @@
 {
-  "extName": { "message": "PreTab" },
-  "extDesc": { "message": "Atalho fácil para a sua guia ativa anterior ao fechar guias." },
-  "extActionToggle": { "message": "Alternar Guia Anterior" },
-  "optionsTitle": { "message": "Configurações do PreTab" },
-  "optionsDesc": { "message": "Configure o histórico em segundo plano e a fila." },
-  "optMruTitle": { "message": "Última Guia Ativa (MRU)" },
-  "optMruDesc": { "message": "Mude para a sua guia ativa anterior ao fechar a atual." },
-  "optQueueTitle": { "message": "Fila em Segundo Plano" },
-  "optQueueDesc": { "message": "Trate as guias abertas recursivamente em segundo plano como uma fila em vez do comportamento normal." }
+  "extName": {
+    "message": "PreTab"
+  },
+  "extDesc": {
+    "message": "Atalho fácil para a sua guia ativa anterior ao fechar guias."
+  },
+  "extActionToggle": {
+    "message": "Alternar Guia Anterior"
+  },
+  "optionsTitle": {
+    "message": "PreTab"
+  },
+  "optionsDesc": {
+    "message": "Configure o histórico em segundo plano e a fila."
+  },
+  "optMruTitle": {
+    "message": "Última Guia Ativa (MRU)"
+  },
+  "optMruDesc": {
+    "message": "Mude para a sua guia ativa anterior ao fechar a atual."
+  },
+  "optQueueTitle": {
+    "message": "Fila em Segundo Plano"
+  },
+  "optQueueDesc": {
+    "message": "Trate as guias abertas recursivamente em segundo plano como uma fila em vez do comportamento normal."
+  }
 }

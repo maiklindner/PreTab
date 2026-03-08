@@ -2,26 +2,29 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title id="pageTitle">PreTab Settings</title>
+  <title id="pageTitle">PreTab</title>
   <link rel="stylesheet" href="options.css">
 </head>
 <body>
   <div class="container">
-    <div style="display: flex; justify-content: flex-end; margin-bottom: 1em;">
-      <select id="langSelect">
-        <option value="auto">Auto (Browser)</option>
-        <option value="en">English (en)</option>
-        <option value="de">Deutsch (de)</option>
-        <option value="es">Español (es)</option>
-        <option value="fr">Français (fr)</option>
-        <option value="ja">日本語 (ja)</option>
-        <option value="pt_BR">Português (pt_BR)</option>
-        <option value="zh_CN">中文 (zh_CN)</option>
-      </select>
-    </div>
-    
-    <h1 id="titleH1">PreTab</h1>
-    <p class="description" id="descText">Configure background history and queue behavior.</p>
+    <header>
+      <div style="display: flex; justify-content: flex-end; width: 100%; margin-bottom: -1.5em; position: relative; z-index: 10;">
+        <select id="langSelect" style="width: auto; padding: 6px; font-size: 0.85em; cursor: pointer; border: 1px solid var(--border-color); border-radius: 6px; background-color: var(--input-bg-color); color: var(--text-color);">
+          <option value="auto">Auto (Browser)</option>
+          <option value="en">English (en)</option>
+          <option value="de">Deutsch (de)</option>
+          <option value="es">Español (es)</option>
+          <option value="fr">Français (fr)</option>
+          <option value="ja">日本語 (ja)</option>
+          <option value="pt_BR">Português (pt_BR)</option>
+          <option value="zh_CN">中文 (zh_CN)</option>
+        </select>
+      </div>
+      <h1 id="titleH1">PreTab</h1>
+      <p class="description" id="descText">Configure background history and queue behavior.</p>
+    </header>
+
+    <main>
 
     <div class="setting-row">
       <div class="setting-info">
@@ -44,6 +47,7 @@
         <span class="slider"></span>
       </label>
     </div>
+    </main>
   </div>
   <script src="options.js"></script>
 </body>
