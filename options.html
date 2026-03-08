@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title id="pageTitle">PreTab Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 1em;">
+      <select id="langSelect">
+        <option value="auto">Auto (Browser)</option>
+        <option value="en">English (en)</option>
+        <option value="de">Deutsch (de)</option>
+        <option value="es">Español (es)</option>
+        <option value="fr">Français (fr)</option>
+        <option value="ja">日本語 (ja)</option>
+        <option value="pt_BR">Português (pt_BR)</option>
+        <option value="zh_CN">中文 (zh_CN)</option>
+      </select>
+    </div>
+    
+    <h1 id="titleH1">PreTab</h1>
+    <p class="description" id="descText">Configure background history and queue behavior.</p>
+
+    <div class="setting-row">
+      <div class="setting-info">
+        <div class="setting-title" id="mruTitle">Last Active Tab (MRU)</div>
+        <div class="setting-desc" id="mruDesc">Switch to your previously active tab when closing the current one.</div>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="mruToggle" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-row">
+      <div class="setting-info">
+        <div class="setting-title" id="queueTitle">Background Queue</div>
+        <div class="setting-desc" id="queueDesc">Treat recursively opened background tabs as a queue instead of normal MRU.</div>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="queueToggle" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

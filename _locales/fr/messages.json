@@ -1,8 +1,11 @@
 {
-  "extName": {
-    "message": "PreTab - Retour à l'onglet précédent"
-  },
-  "extDescription": {
-    "message": "Retourne automatiquement au dernier onglet actif lorsque tu fermes le courant. Améliore ta navigation avec un historique malin."
-  }
+  "extName": { "message": "PreTab" },
+  "extDesc": { "message": "Basculez facilement vers votre onglet précédent à l'aide d'un raccourci ou lors de la fermeture d'onglets." },
+  "extActionToggle": { "message": "Basculer vers l'onglet précédent" },
+  "optionsTitle": { "message": "Paramètres PreTab" },
+  "optionsDesc": { "message": "Configurez le comportement de l'historique et de la file d'attente en arrière-plan." },
+  "optMruTitle": { "message": "Dernier Onglet Actif (MRU)" },
+  "optMruDesc": { "message": "Basculez vers votre précédent onglet actif lorsque vous fermez l'onglet actuel." },
+  "optQueueTitle": { "message": "File d'attente en arrière-plan" },
+  "optQueueDesc": { "message": "Traitez les onglets en arrière-plan ouverts de manière récursive comme une file d'attente au lieu d'un MRU normal." }
 }

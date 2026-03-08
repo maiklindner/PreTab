@@ -1,8 +1,11 @@
 {
-  "extName": {
-    "message": "PreTab - 前のタブに戻る"
-  },
-  "extDescription": {
-    "message": "タブを閉じると、隣のタブではなく「最後に使用したタブ」に自動的に戻ります。スマートな履歴機能で作業効率を向上させます。"
-  }
+  "extName": { "message": "PreTab" },
+  "extDesc": { "message": "ショートカットを使って、またはタブを閉じるときに、以前アクティブだったタブに簡単に切り替えます。" },
+  "extActionToggle": { "message": "前のタブに切り替える" },
+  "optionsTitle": { "message": "PreTab の設定" },
+  "optionsDesc": { "message": "バックグラウンドの履歴とキューの動作を構成します。" },
+  "optMruTitle": { "message": "最後にアクティブだったタブ (MRU)" },
+  "optMruDesc": { "message": "現在のタブを閉じたときに、以前アクティブだったタブに切り替えます。" },
+  "optQueueTitle": { "message": "バックグラウンドキュー" },
+  "optQueueDesc": { "message": "再帰的に開かれたバックグラウンドタブを、通常のMRU動作ではなくキューとして扱います。" }
 }

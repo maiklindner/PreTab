@@ -1,8 +1,11 @@
 {
-  "extName": {
-    "message": "PreTab - 返回上一标签页"
-  },
-  "extDescription": {
-    "message": "关闭当前标签页时自动返回上一个活动标签页。通过智能历史记录优化你的浏览体验。"
-  }
+  "extName": { "message": "PreTab" },
+  "extDesc": { "message": "使用快捷键或在关闭标签页时轻松切换到之前活动的标签页。" },
+  "extActionToggle": { "message": "切换到上一个标签页" },
+  "optionsTitle": { "message": "PreTab 设置" },
+  "optionsDesc": { "message": "配置后台历史记录和队列行为。" },
+  "optMruTitle": { "message": "最近使用的标签页 (MRU)" },
+  "optMruDesc": { "message": "当关闭当前标签页时，切换回您之前活动的标签页。" },
+  "optQueueTitle": { "message": "后台队列" },
+  "optQueueDesc": { "message": "将递归打开的后台标签页视为队列，而不是常规的 MRU 行为。" }
 }

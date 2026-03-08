@@ -1,11 +1,11 @@
 {
-  "extName": {
-    "message": "PreTab - Zurück zum letzten Tab"
-  },
-  "extDescription": {
-    "message": "Springt beim Schließen eines Tabs automatisch zum zuletzt aktiven Tab zurück. Optimiert den Workflow mit intelligenter Historie."
-  },
-  "extActionToggle": {
-    "message": "Zum vorherigen Tab wechseln"
-  }
+  "extName": { "message": "PreTab" },
+  "extDesc": { "message": "Wechsle mit einem Hotkey oder beim Schließen von Tabs einfach zu deinem zuletzt aktiven Tab." },
+  "extActionToggle": { "message": "Vorherigen Tab aufrufen" },
+  "optionsTitle": { "message": "PreTab Einstellungen" },
+  "optionsDesc": { "message": "Konfiguriere das Verhalten des Hintergrundverlaufs und der Warteschlange." },
+  "optMruTitle": { "message": "Zuletzt aktiver Tab (MRU)" },
+  "optMruDesc": { "message": "Wechsle zum zuletzt aktiven Tab, wenn der aktuelle geschlossen wird." },
+  "optQueueTitle": { "message": "Hintergrund-Warteschlange" },
+  "optQueueDesc": { "message": "Behandle rekursiv geöffnete Hintergrund-Tabs als Warteschlange statt als normales MRU." }
 }

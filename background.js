@@ -1,3 +1,21 @@
+// Settings
+let settings = {
+  mruEnabled: true,
+  queueEnabled: true
+};
+
+chrome.storage.local.get({ mruEnabled: true, queueEnabled: true }, (result) => {
+  settings.mruEnabled = result.mruEnabled;
+  settings.queueEnabled = result.queueEnabled;
+});
+
+chrome.storage.onChanged.addListener((changes, namespace) => {
+  if (namespace === 'local') {
+    if (changes.mruEnabled) settings.mruEnabled = changes.mruEnabled.newValue;
+    if (changes.queueEnabled) settings.queueEnabled = changes.queueEnabled.newValue;
+  }
+});
+
 // History list (default behavior)
 let tabHistory = [];
 
@@ -68,8 +86,11 @@ chrome.tabs.onRemoved.addListener((tabId, removeInfo) => {
 
   tabHistory = tabHistory.filter(id => id !== tabId);
 
-  // If we were in "batch mode" (processing new tabs)
-  if (lastActiveWasUnseen) {
+  // If MRU is disabled, let browser do default
+  if (!settings.mruEnabled) return;
+
+  // If we were in "batch mode" (processing new tabs) and queue is enabled
+  if (settings.queueEnabled && lastActiveWasUnseen) {
 
     // Check where we are right now
     chrome.tabs.query({ currentWindow: true, active: true }, (tabs) => {
