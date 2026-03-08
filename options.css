@@ -30,7 +30,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
@@ -44,7 +44,7 @@ body {
   max-width: 520px;
   border: 1px solid var(--border-color);
   box-sizing: border-box;
-  margin: 4em 2em;
+  margin: 2em;
 }
 
 h1 {
