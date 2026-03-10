@@ -1,4 +1,4 @@
-![Icon](icons/logo48.png) 
+![Icon](assets/store/brand/logo.png) 
 
 # PreTab - Previous Tab Switcher
 
