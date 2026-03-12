@@ -29,10 +29,30 @@ let lastActiveWasUnseen = false;
 // Prevents skipping if Chrome is faster than our script.
 let justAckowledgedId = null;
 
+// Initialize state from storage
+chrome.storage.local.get({ 
+  tabHistory: [], 
+  unseenTabs: [], 
+  lastActiveWasUnseen: false 
+}, (result) => {
+  tabHistory = result.tabHistory;
+  unseenTabs = new Set(result.unseenTabs);
+  lastActiveWasUnseen = result.lastActiveWasUnseen;
+});
+
+function saveState() {
+  chrome.storage.local.set({
+    tabHistory: tabHistory,
+    unseenTabs: Array.from(unseenTabs),
+    lastActiveWasUnseen: lastActiveWasUnseen
+  });
+}
+
 // Event: A new tab is created
 chrome.tabs.onCreated.addListener((tab) => {
   if (!tab.active) {
     unseenTabs.add(tab.id);
+    saveState();
   }
 });
 
@@ -58,6 +78,7 @@ chrome.tabs.onActivated.addListener((activeInfo) => {
   if (tabHistory.length > 50) {
     tabHistory.shift();
   }
+  saveState();
 });
 
 // Event: Window focus changes (handling cross-window switching)
@@ -73,6 +94,7 @@ chrome.windows.onFocusChanged.addListener((windowId) => {
         if (tabHistory.length > 50) {
           tabHistory.shift();
         }
+        saveState();
       }
     });
   }
@@ -85,6 +107,7 @@ chrome.tabs.onRemoved.addListener((tabId, removeInfo) => {
   }
 
   tabHistory = tabHistory.filter(id => id !== tabId);
+  saveState();
 
   // If MRU is disabled, let browser do default
   if (!settings.mruEnabled) return;
@@ -137,6 +160,7 @@ function activateLastHistoryTab() {
       }
     }).catch(() => {
       tabHistory.pop();
+      saveState();
       activateLastHistoryTab();
     });
   }
@@ -150,6 +174,7 @@ chrome.tabs.onReplaced.addListener((addedTabId, removedTabId) => {
     unseenTabs.delete(removedTabId);
     unseenTabs.add(addedTabId);
   }
+  saveState();
 });
 
 function togglePreviousTab() {
@@ -167,6 +192,7 @@ function togglePreviousTab() {
       // Cleanup if tab is gone
       console.log("Tab does not exist anymore, removing from history.");
       tabHistory = tabHistory.filter(id => id !== prevTabId);
+      saveState();
 
       // If necessary, go one more back
       if (tabHistory.length >= 2) {

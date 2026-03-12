@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6] - 2026-03-12
+
+### Fixed
+- **State Persistence**: Fixed a bug where the extension would "forget" the tab history after some time (caused by Manifest V3 service worker termination). The history is now persisted to local storage.
+
+---
+
 ## [1.5] - 2026-03-09
 
 ### Changed

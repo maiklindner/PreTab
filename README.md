@@ -36,7 +36,7 @@ You have three options to install PreTab:
 
 ## Privacy
 
-The extension operates exclusively locally on your device (RAM). It deletes all history data as soon as the browser is closed.  
+The extension operates exclusively locally on your device. Your tab history is stored in your browser's local storage to ensure persistence while the browser is open. No data is ever transmitted to the developer or third parties.
 [Read full Privacy Policy](PRIVACY.md)
 
 ## License
