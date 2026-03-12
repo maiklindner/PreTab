@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 - **State Persistence**: Fixed a bug where the extension would "forget" the tab history after some time (caused by Manifest V3 service worker termination). The history is now persisted to local storage.
+- **Cross-Window MRU**: Added full support for tracking tab history across multiple browser windows.
 
 ---
 
