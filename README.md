@@ -24,11 +24,9 @@ It combines two smart behaviors to keep you focused:
 
 You have three options to install PreTab:
 
-**1. Chrome Web Store**
-https://chromewebstore.google.com/detail/pretab/hjcngomoamhoibjmmdcmfldgbcgboeok
+**1. [Chrome Web Store](https://chromewebstore.google.com/detail/pretab/hjcngomoamhoibjmmdcmfldgbcgboeok)**
 
-**2. Microsoft Edge Add-ons**
-*Link coming soon*
+**2. [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/pretab/nmbmkbiigbckpeeedofdjkacheamhpll)**
 
 **3. Manual Installation (Unpacked)**
 1. Clone this repository or download the ZIP and extract it.
