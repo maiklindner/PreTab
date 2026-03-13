@@ -2,7 +2,7 @@
   "extName": {
     "message": "PreTab"
   },
-  "extDesc": {
+  "extDescription": {
     "message": "ショートカットを使って、またはタブを閉じるときに、以前アクティブだったタブに簡単に切り替えます。"
   },
   "extActionToggle": {

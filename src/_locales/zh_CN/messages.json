@@ -2,7 +2,7 @@
   "extName": {
     "message": "PreTab"
   },
-  "extDesc": {
+  "extDescription": {
     "message": "使用快捷键或在关闭标签页时轻松切换到之前活动的标签页。"
   },
   "extActionToggle": {

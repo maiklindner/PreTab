@@ -2,7 +2,7 @@
   "extName": {
     "message": "PreTab"
   },
-  "extDesc": {
+  "extDescription": {
     "message": "Basculez facilement vers votre onglet précédent à l'aide d'un raccourci ou lors de la fermeture d'onglets."
   },
   "extActionToggle": {

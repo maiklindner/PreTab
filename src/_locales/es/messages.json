@@ -2,7 +2,7 @@
   "extName": {
     "message": "PreTab"
   },
-  "extDesc": {
+  "extDescription": {
     "message": "Cambia a tu pestaña activa anterior fácilmente usando un atajo o al cerrar pestañas."
   },
   "extActionToggle": {

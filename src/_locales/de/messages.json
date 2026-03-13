@@ -2,7 +2,7 @@
   "extName": {
     "message": "PreTab"
   },
-  "extDesc": {
+  "extDescription": {
     "message": "Wechsle mit einem Hotkey oder beim Schließen von Tabs einfach zu deinem zuletzt aktiven Tab."
   },
   "extActionToggle": {
