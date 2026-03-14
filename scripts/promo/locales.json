@@ -1,0 +1,88 @@
+{
+  "locales": {
+    "en": {
+      "voice": "en-US-Studio-Q",
+      "flag": "--lang=en-US",
+      "script": [
+        "Take control of your browsing workflow with smart tab switching.",
+        "MRU logic returns you to your last active tab when closing others.",
+        "Smart Queue manages background tabs sequentially for focus.",
+        "Your data stays 100% private. Fast, simple, and secure.",
+        "PreTab"
+      ],
+      "features": ["MRU Switching", "Smart Queue", "Privacy Focused"]
+    },
+    "de": {
+      "voice": "de-DE-Chirp3-HD-Enceladus",
+      "flag": "--lang=de-DE",
+      "script": [
+        "Verwalte deine Tab-Historie intelligent für einen besseren Workflow.",
+        "Der intelligente Tab-Verlauf bringt dich beim Schließen immer zum letzten aktiven Tab zurück.",
+        "Die Hintergrund-Warteschlange ermöglicht fokussiertes, sequenzielles Arbeiten.",
+        "Deine Daten bleiben 100% privat. Schnell, einfach und sicher.",
+        "PreTab"
+      ],
+      "features": ["Tab-Verlauf", "Smart Queue", "Privatsphäre"]
+    },
+    "ja": {
+      "voice": "ja-JP-Neural2-D",
+      "flag": "--lang=ja-JP",
+      "script": [
+        "スマートなタブ切り替えで、ブラウジングのワークフローをコントロールしましょう。",
+        "MRUロジックにより、タブを閉じると最後のアクティブなタブに戻ります。",
+        "スマートキューがバックグラウンドタブを順序立てて管理し、集中力を高めます。",
+        "データは完全にプライベート。高速、シンプル、そして安全です。",
+        "PreTab"
+      ],
+      "features": ["MRU切り替え", "スマートキュー", "プライバシー重視"]
+    },
+    "es": {
+      "voice": "es-ES-Studio-F",
+      "flag": "--lang=es-ES",
+      "script": [
+        "Toma el control de tu flujo de trabajo con el cambio inteligente de pestañas.",
+        "La lógica MRU te devuelve a tu última pestaña activa al cerrar otras.",
+        "La cola inteligente gestiona las pestañas en segundo plano de forma secuencial.",
+        "Tus datos son 100% privados. Rápido, sencillo y seguro.",
+        "PreTab"
+      ],
+      "features": ["Cambio MRU", "Cola Inteligente", "Privacidad"]
+    },
+    "fr": {
+      "voice": "fr-FR-Studio-D",
+      "flag": "--lang=fr-FR",
+      "script": [
+        "Prenez le contrôle de votre navigation avec le changement d'onglets intelligent.",
+        "La logique MRU vous ramène à votre dernier onglet actif lors de la fermeture.",
+        "La file d'attente intelligente gère les onglets en arrière-plan de manière séquentielle.",
+        "Vos données restent 100% privées. Rapide, simple et sécurisé.",
+        "PreTab"
+      ],
+      "features": ["Changement MRU", "File d'attente", "Confidentialité"]
+    },
+    "pt_BR": {
+      "voice": "pt-BR-Neural2-B",
+      "flag": "--lang=pt-BR",
+      "script": [
+        "Assuma o controle do seu fluxo de trabalho com a alternância inteligente de abas.",
+        "A lógica MRU retorna você à sua última aba ativa ao fechar outras.",
+        "A fila inteligente gerencia abas em segundo plano de forma sequencial.",
+        "Seus dados permanecem 100% privados. Rápido, simples e seguro.",
+        "PreTab"
+      ],
+      "features": ["Alternância MRU", "Fila Inteligente", "Privacidade"]
+    },
+    "zh_CN": {
+      "voice": "cmn-CN-Wavenet-C",
+      "flag": "--lang=zh-CN",
+      "script": [
+        "通过智能标签页切换，掌控你的浏览工作流程。",
+        "MRU 逻辑会在你关闭标签页时返回到上一个活动标签。",
+        "智能队列按顺序管理后台标签页，让你保持专注。",
+        "数据 100% 私密。快速、简单且安全。",
+        "PreTab"
+      ],
+      "features": ["MRU 切换", "智能队列", "隐私保护"]
+    }
+  }
+}
