@@ -1,7 +1,7 @@
 {
   "locales": {
     "en": {
-      "voice": "en-US-Studio-Q",
+      "voice": "en-US-Chirp3-HD-Enceladus",
       "flag": "--lang=en-US",
       "script": [
         "Take control of your browsing workflow with smart tab switching.",
@@ -16,7 +16,7 @@
       "voice": "de-DE-Chirp3-HD-Enceladus",
       "flag": "--lang=de-DE",
       "script": [
-        "Verwalte deine Tab-Historie intelligent für einen besseren Workflow.",
+        " Verwalte deine Tab-Historie intelligent für einen besseren Workflow.",
         "Der intelligente Tab-Verlauf bringt dich beim Schließen immer zum letzten aktiven Tab zurück.",
         "Die Hintergrund-Warteschlange ermöglicht fokussiertes, sequenzielles Arbeiten.",
         "Deine Daten bleiben 100% privat. Schnell, einfach und sicher.",
@@ -25,7 +25,7 @@
       "features": ["Tab-Verlauf", "Smart Queue", "Privatsphäre"]
     },
     "ja": {
-      "voice": "ja-JP-Neural2-D",
+      "voice": "ja-JP-Chirp3-HD-Enceladus",
       "flag": "--lang=ja-JP",
       "script": [
         "スマートなタブ切り替えで、ブラウジングのワークフローをコントロールしましょう。",
@@ -37,7 +37,7 @@
       "features": ["MRU切り替え", "スマートキュー", "プライバシー重視"]
     },
     "es": {
-      "voice": "es-ES-Studio-F",
+      "voice": "es-ES-Chirp3-HD-Enceladus",
       "flag": "--lang=es-ES",
       "script": [
         "Toma el control de tu flujo de trabajo con el cambio inteligente de pestañas.",
@@ -49,7 +49,7 @@
       "features": ["Cambio MRU", "Cola Inteligente", "Privacidad"]
     },
     "fr": {
-      "voice": "fr-FR-Studio-D",
+      "voice": "fr-FR-Chirp3-HD-Enceladus",
       "flag": "--lang=fr-FR",
       "script": [
         "Prenez le contrôle de votre navigation avec le changement d'onglets intelligent.",
@@ -61,7 +61,7 @@
       "features": ["Changement MRU", "File d'attente", "Confidentialité"]
     },
     "pt_BR": {
-      "voice": "pt-BR-Neural2-B",
+      "voice": "pt-BR-Chirp3-HD-Enceladus",
       "flag": "--lang=pt-BR",
       "script": [
         "Assuma o controle do seu fluxo de trabalho com a alternância inteligente de abas.",
@@ -73,7 +73,7 @@
       "features": ["Alternância MRU", "Fila Inteligente", "Privacidade"]
     },
     "zh_CN": {
-      "voice": "cmn-CN-Wavenet-C",
+      "voice": "cmn-CN-Chirp3-HD-Enceladus",
       "flag": "--lang=zh-CN",
       "script": [
         "通过智能标签页切换，掌控你的浏览工作流程。",
