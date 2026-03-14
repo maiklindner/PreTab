@@ -14,10 +14,8 @@ function getVoPath(audioDir, lang, index, text) {
     let finalInput = text;
     let isSsml = false;
 
-    if (text === 'PreTab' && lang === 'de') {
-        finalInput = 'PreTab.';
-    } else if (text === 'PreTab' && !voice.includes('Chirp3-HD')) {
-        const ipa = 'priː.tæb';
+    if (text === 'PreTab') {
+        const ipa = 'priː tæb';
         finalInput = `<speak><phoneme alphabet="ipa" ph="${ipa}">PreTab</phoneme></speak>`;
         isSsml = true;
     }

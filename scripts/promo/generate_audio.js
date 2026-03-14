@@ -19,9 +19,8 @@ async function generateVo(lang, index, text) {
         finalInput = 'PreTab.';
     }
 
-    // BRANDING PHONATION: HD voices (Chirp3) handle "PreTab" well natively in context.
-    // We only use SSML if explicitly needed for older voices.
-    if (text === 'PreTab' && !voice.includes('Chirp3-HD')) {
+    // BRANDING PHONATION
+    if (text === 'PreTab') {
         const ipa = 'priː tæb';
         finalInput = `<speak><phoneme alphabet="ipa" ph="${ipa}">PreTab</phoneme></speak>`;
         isSsml = true;
@@ -65,13 +64,14 @@ async function generateVo(lang, index, text) {
 }
 
 async function run() {
-    // Current scope: Only German
-    const lang = 'de';
-    const data = locales[lang];
-    if (data) {
-        console.log(`Finalizing all German audio segments with ${data.voice}...`);
-        for (let i = 0; i < data.script.length; i++) {
-            await generateVo(lang, i, data.script[i]);
+    const targetLocales = ['en', 'de', 'ja', 'es', 'fr', 'pt_BR', 'zh_CN'];
+    for (const lang of targetLocales) {
+        const data = locales[lang];
+        if (data) {
+            console.log(`Finalizing all ${lang} audio segments with ${data.voice}...`);
+            for (let i = 0; i < data.script.length; i++) {
+                await generateVo(lang, i, data.script[i]);
+            }
         }
     }
 }
