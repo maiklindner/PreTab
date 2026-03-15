@@ -27,27 +27,46 @@ function getVoPath(audioDir, lang, index, text) {
     return path.join(audioDir, `vo_${lang}_${index}_${hash}.mp3`);
 }
 
+function getVideoHash(localeKey, extensionPath) {
+    // Hash includes interaction script (before audio mastering), locale data, and src folder
+    const scriptContent = fs.readFileSync(__filename, 'utf8').split('// Audio Mastering')[0];
+    const localeData = locales[localeKey];
+    const features = JSON.stringify(localeData.features);
+    const brandName = localeData.script[localeData.script.length - 1];
+    
+    // Quick src hash (MacOS compatible)
+    const srcHash = execSync(`find "${extensionPath}" -type f -not -path '*/.*' -print0 | xargs -0 md5 | md5`, { encoding: 'utf8' }).trim();
+    
+    return crypto.createHash('md5')
+        .update(scriptContent + features + brandName + srcHash)
+        .digest('hex')
+        .substring(0, 10);
+}
+
 async function recordPromo(localeKey) {
     const localeData = locales[localeKey];
     if (!localeData) return;
 
     console.log(`\n--- Recording PreTab Promo (V4 MASTER): ${localeKey.toUpperCase()} ---`);
-    const outputDir = path.join(__dirname, '../../assets/store/video');
-    const audioDir = path.join(__dirname, '../../assets/store/audio');
-    const tempDir = path.join(__dirname, 'temp');
+    const outputDir = path.resolve(__dirname, '../../assets/store/video');
+    const audioDir = path.resolve(__dirname, '../../assets/store/audio');
+    const cacheDir = path.join(outputDir, 'cache');
     
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
-    if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir, { recursive: true });
+    if (!fs.existsSync(audioDir)) fs.mkdirSync(audioDir, { recursive: true });
+    if (!fs.existsSync(cacheDir)) fs.mkdirSync(cacheDir, { recursive: true });
 
-    const videoPath = path.join(tempDir, `video_${localeKey}.mp4`);
-    if (fs.existsSync(videoPath)) fs.unlinkSync(videoPath); // Force fresh recording
     const finalPath = path.join(outputDir, `promo_${localeKey}.mp4`);
-    const music = path.join(__dirname, 'assets/mklr_music.mp3');
+    const music = path.join(audioDir, 'mklr_music.mp3');
 
     const extensionPath = path.resolve('../../src');
+    const videoHash = getVideoHash(localeKey, extensionPath);
+    const videoPath = path.join(cacheDir, `raw_${localeKey}_${videoHash}.mp4`);
+    
     if (fs.existsSync(videoPath)) {
-        console.log(`Raw video already exists at ${videoPath}. Skipping recording phase.`);
+        console.log(`Using cached raw video: ${path.basename(videoPath)}`);
     } else {
+        console.log(`No cache found. Starting fresh Puppeteer recording...`);
         const browser = await puppeteer.launch({
             headless: false,
             args: [
@@ -265,10 +284,11 @@ async function recordPromo(localeKey) {
     filterComplex += `${voMixInputStr}amix=inputs=${localeData.script.length}:normalize=0:dropout_transition=0,loudnorm=I=-16:TP=-1.5:LRA=11,asplit=2[allvo_duck][allvo_mix];`;
 
     // 2. Duck the music using the normalized VO (sidechain)
-    filterComplex += `[bg_music][allvo_duck]sidechaincompress=threshold=0.15:ratio=4:release=300:attack=15[ducked];`;
+    // threshold=0.03 is sensitive enough for -16 LUFS normalized VO
+    filterComplex += `[bg_music][allvo_duck]sidechaincompress=threshold=0.03:ratio=5:release=300:attack=15[ducked];`;
 
     // 3. Final Sum (Mix ducked music + normalized VO)
-    filterComplex += `[ducked][allvo_mix]amix=inputs=2:normalize=0:duration=first[final_audio]`;
+    filterComplex += `[ducked][allvo_mix]amix=inputs=2:normalize=0:weights=1|1:duration=first[final_audio]`;
 
     const voInputs = localeData.script.map((text, i) => `-i "${getVoPath(audioDir, localeKey, i, text)}"`).join(' ');
     const cmd = `ffmpeg -y -i "${videoPath}" -i "${music}" ${voInputs} -filter_complex "${filterComplex}" -map 0:v -map "[final_audio]" -c:v libx264 -pix_fmt yuv420p -r 60 -b:a 192k -ar 44100 "${finalPath}"`;
@@ -278,7 +298,16 @@ async function recordPromo(localeKey) {
 }
 
 async function run() {
-    const targetLocales = ['en', 'de', 'ja', 'es', 'fr', 'pt_BR', 'zh_CN'];
+    let targetLocales = ['en', 'de', 'ja', 'es', 'fr', 'pt_BR', 'zh_CN'];
+
+    // LOCALE FILTERING
+    const localeArg = process.argv.find(arg => arg.startsWith('--locales=') || arg.startsWith('-l='));
+    if (localeArg) {
+        const requested = localeArg.split('=')[1].split(',');
+        targetLocales = targetLocales.filter(l => requested.includes(l));
+        console.log(`Filtering for locales: ${targetLocales.join(', ')}`);
+    }
+
     for (const key of targetLocales) { await recordPromo(key); }
 }
 
