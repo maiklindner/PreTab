@@ -21,7 +21,11 @@ yarn-error.log
 # Build / Output Dirs
 dist/
 build/
+temp/
 *.zip
 *.crx
 *.pem
 *.pub
+keys/
+.env
+scripts/promo/output/
