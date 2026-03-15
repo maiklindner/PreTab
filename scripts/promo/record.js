@@ -250,19 +250,25 @@ async function recordPromo(localeKey) {
     // Audio Mastering
     // Safe Gaps: 2.5, 7.5, 12.0, 17.5, 25.0 (Branding at 25s)
     const offsets = [2.5, 7.5, 12.0, 17.5, 25.0];
-    const masterGain = 2.0;
+    // --- Standardized Premium Audio Mixing ---
+    const musicBaseline = 0.75;
 
-    let filterComplex = `[1:a]volume=0.7[bg_music];`;
+    let filterComplex = `[1:a]volume=${musicBaseline}[bg_music];`;
     let voMixInputStr = '';
     for (let i = 0; i < localeData.script.length; i++) {
         const d = Math.round(offsets[i] * 1000);
         filterComplex += `[${i + 2}:a]adelay=${d}|${d}[v${i}];`;
         voMixInputStr += `[v${i}]`;
     }
-    filterComplex += `${voMixInputStr}amix=inputs=${localeData.script.length}:normalize=0:dropout_transition=0,volume=${masterGain * localeData.script.length}[allvo_raw];`;
-    filterComplex += `[allvo_raw]asplit=2[allvo_duck][allvo_mix];`;
-    filterComplex += `[bg_music][allvo_duck]sidechaincompress=threshold=0.1:ratio=20:release=200:attack=15[ducked];`;
-    filterComplex += `[ducked][allvo_mix]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-16:TP=-1.5:LRA=11[final_audio]`;
+
+    // 1. Combine segments and Normalize VO stream independently
+    filterComplex += `${voMixInputStr}amix=inputs=${localeData.script.length}:normalize=0:dropout_transition=0,loudnorm=I=-16:TP=-1.5:LRA=11[allvo_norm];`;
+
+    // 2. Duck the music using the normalized VO
+    filterComplex += `[bg_music][allvo_norm]sidechaincompress=threshold=0.15:ratio=4:release=300:attack=15[ducked];`;
+
+    // 3. Final Sum (Mix ducked music + normalized VO)
+    filterComplex += `[ducked][allvo_norm]amix=inputs=2:normalize=0:weights=1|1:duration=first[final_audio]`;
 
     const voInputs = localeData.script.map((text, i) => `-i "${getVoPath(audioDir, localeKey, i, text)}"`).join(' ');
     const cmd = `ffmpeg -y -i "${videoPath}" -i "${music}" ${voInputs} -filter_complex "${filterComplex}" -map 0:v -map "[final_audio]" -c:v libx264 -pix_fmt yuv420p -r 60 -b:a 192k -ar 44100 "${finalPath}"`;
