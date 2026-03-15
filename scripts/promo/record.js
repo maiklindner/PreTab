@@ -261,14 +261,14 @@ async function recordPromo(localeKey) {
         voMixInputStr += `[v${i}]`;
     }
 
-    // 1. Combine segments and Normalize VO stream independently
-    filterComplex += `${voMixInputStr}amix=inputs=${localeData.script.length}:normalize=0:dropout_transition=0,loudnorm=I=-16:TP=-1.5:LRA=11[allvo_norm];`;
+    // 1. Combine segments, Normalize VO stream, and split for dual use
+    filterComplex += `${voMixInputStr}amix=inputs=${localeData.script.length}:normalize=0:dropout_transition=0,loudnorm=I=-16:TP=-1.5:LRA=11,asplit=2[allvo_duck][allvo_mix];`;
 
-    // 2. Duck the music using the normalized VO
-    filterComplex += `[bg_music][allvo_norm]sidechaincompress=threshold=0.15:ratio=4:release=300:attack=15[ducked];`;
+    // 2. Duck the music using the normalized VO (sidechain)
+    filterComplex += `[bg_music][allvo_duck]sidechaincompress=threshold=0.15:ratio=4:release=300:attack=15[ducked];`;
 
     // 3. Final Sum (Mix ducked music + normalized VO)
-    filterComplex += `[ducked][allvo_norm]amix=inputs=2:normalize=0:weights=1|1:duration=first[final_audio]`;
+    filterComplex += `[ducked][allvo_mix]amix=inputs=2:normalize=0:duration=first[final_audio]`;
 
     const voInputs = localeData.script.map((text, i) => `-i "${getVoPath(audioDir, localeKey, i, text)}"`).join(' ');
     const cmd = `ffmpeg -y -i "${videoPath}" -i "${music}" ${voInputs} -filter_complex "${filterComplex}" -map 0:v -map "[final_audio]" -c:v libx264 -pix_fmt yuv420p -r 60 -b:a 192k -ar 44100 "${finalPath}"`;
