@@ -1,7 +1,8 @@
-const textToSpeech = require('@google-cloud/text-to-speech');
-const path = require('path');
 const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 const crypto = require('crypto');
+const textToSpeech = require('@google-cloud/text-to-speech');
 
 const KEY_PATH = '/Users/maik/Documents/GitHub/Extension-Conventions/keys/gen-lang-client-0215910193-063beb19bcc9.json';
 const client = new textToSpeech.TextToSpeechClient({ keyFilename: KEY_PATH });
@@ -44,7 +45,7 @@ async function generateVo(lang, index, text) {
     const request = {
         input: isSsml ? { ssml: finalInput } : { text: finalInput },
         voice: { 
-            languageCode: localeData.flag.split('=')[1], 
+            languageCode: localeData.flag.split('=')[1].replace('zh-CN', 'cmn-CN'), 
             name: voice 
         },
         audioConfig: { 
@@ -56,15 +57,35 @@ async function generateVo(lang, index, text) {
 
     try {
         const [response] = await client.synthesizeSpeech(request);
-        await fs.promises.writeFile(filePath, response.audioContent, 'binary');
-        console.log(`Saved: ${filePath}`);
+        const tempPath = filePath + '.raw.mp3';
+        fs.writeFileSync(tempPath, response.audioContent, 'binary');
+        
+        // MANDATORY PREMIUM SILENCE STRIPPING
+        const silRemove = `ffmpeg -y -i "${tempPath}" -af "silenceremove=start_periods=1:start_threshold=-60dB:stop_periods=1:stop_duration=0.5:stop_threshold=-60dB" "${filePath}"`;
+        try {
+            execSync(silRemove, { stdio: 'ignore' });
+            fs.unlinkSync(tempPath);
+        } catch (e) {
+            console.warn(`FFmpeg silenceremove failed for ${filePath}, using raw file.`);
+            fs.renameSync(tempPath, filePath);
+        }
+        console.log(`Saved (stripped): ${filePath}`);
     } catch (err) {
         console.error(`Error generating audio for ${lang}:`, err.message);
     }
 }
 
 async function run() {
-    const targetLocales = ['en', 'de', 'ja', 'es', 'fr', 'pt_BR', 'zh_CN'];
+    let targetLocales = ['en', 'de', 'ja', 'es', 'fr', 'pt_BR', 'zh_CN'];
+
+    // LOCALE FILTERING
+    const localeArg = process.argv.find(arg => arg.startsWith('--locales=') || arg.startsWith('-l='));
+    if (localeArg) {
+        const requested = localeArg.split('=')[1].split(',');
+        targetLocales = targetLocales.filter(l => requested.includes(l));
+        console.log(`Filtering for locales: ${targetLocales.join(', ')}`);
+    }
+
     for (const lang of targetLocales) {
         const data = locales[lang];
         if (data) {
