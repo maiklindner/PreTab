@@ -64,18 +64,25 @@ header {
 
 h1 {
   font-size: 24px;
-  margin-top: 0;
-  margin-bottom: 8px;
   color: var(--text-color);
   font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
   letter-spacing: -0.025em;
 }
 
-.description {
+h2 {
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: 600;
+  margin: 0;
+}
+
+p#optionsDesc {
   color: var(--label-color);
+  opacity: 0.9;
   margin-top: 0;
   margin-bottom: 0;
-  opacity: 0.9;
 }
 
 .setting-row {
