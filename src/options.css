@@ -1,11 +1,16 @@
 :root {
   --bg-color: #f7f9fc;
   --card-bg-color: #ffffff;
+  --secondary-bg: #f9fafb;
   --text-color: #1f2937;
   --label-color: #4b5563;
   --border-color: #e5e7eb;
+  --input-bg-color: #ffffff;
   --primary-color: #3b82f6;
   --primary-hover-color: #2563eb;
+  --secondary-hover-color: #f3f4f6;
+  --success-color: #10b981;
+  --error-color: #ef4444;
   --shadow-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -13,11 +18,14 @@
   :root {
     --bg-color: #111827;
     --card-bg-color: #1f2937;
+    --secondary-bg: #2d3748;
     --text-color: #f9fafb;
     --label-color: #9ca3af;
     --border-color: #374151;
+    --input-bg-color: #1f2937;
     --primary-color: #3b82f6;
     --primary-hover-color: #60a5fa;
+    --secondary-hover-color: #4b5563;
     --shadow-color: rgba(0, 0, 0, 0.4);
   }
 }
