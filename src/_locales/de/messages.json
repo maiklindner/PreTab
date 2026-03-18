@@ -11,8 +11,8 @@
   "optionsTitle": {
     "message": "PreTab"
   },
-  "optionsDesc": {
-    "message": "Konfiguriere das Verhalten des Hintergrundverlaufs und der Warteschlange."
+  "optionsDescription": {
+    "message": "Konfiguriere hier die Verlaufshistorie, Tastaturkürzel und das Warteschlangen-Verhalten."
   },
   "optMruTitle": {
     "message": "Zuletzt aktiver Tab (MRU)"

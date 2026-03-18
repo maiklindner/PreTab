@@ -11,8 +11,8 @@
   "optionsTitle": {
     "message": "PreTab"
   },
-  "optionsDesc": {
-    "message": "配置后台历史记录和队列行为。"
+  "optionsDescription": {
+    "message": "配置后台历史记录、键盘快捷键和队列行为。"
   },
   "optMruTitle": {
     "message": "最近使用的标签页 (MRU)"

@@ -11,8 +11,8 @@
   "optionsTitle": {
     "message": "PreTab"
   },
-  "optionsDesc": {
-    "message": "Configura el comportamiento del historial en segundo plano y la cola."
+  "optionsDescription": {
+    "message": "Configura el historial en segundo plano, los atajos de teclado y el comportamiento de la cola."
   },
   "optMruTitle": {
     "message": "Última Pestaña Activa (MRU)"

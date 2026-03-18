@@ -11,8 +11,8 @@
   "optionsTitle": {
     "message": "PreTab"
   },
-  "optionsDesc": {
-    "message": "Configurez le comportement de l'historique et de la file d'attente en arrière-plan."
+  "optionsDescription": {
+    "message": "Configurez l'historique en arrière-plan, les raccourcis clavier et le comportement de la file d'attente."
   },
   "optMruTitle": {
     "message": "Dernier Onglet Actif (MRU)"

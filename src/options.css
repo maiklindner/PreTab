@@ -78,7 +78,7 @@ h2 {
   margin: 0;
 }
 
-p#optionsDesc {
+p#optionsDescription {
   color: var(--label-color);
   opacity: 0.9;
   margin-top: 0;

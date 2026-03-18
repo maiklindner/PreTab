@@ -34,7 +34,7 @@ function initLocalization(callback) {
 function localizeHtmlPage() {
   document.getElementById('pageTitle').textContent = getMessage('optionsTitle');
   document.getElementById('titleH1').textContent = getMessage('extName');
-  document.getElementById('optionsDesc').textContent = getMessage('optionsDesc');
+  document.getElementById('optionsDescription').textContent = getMessage('optionsDescription');
   
   document.getElementById('mruTitle').textContent = getMessage('optMruTitle');
   document.getElementById('mruDesc').textContent = getMessage('optMruDesc');

@@ -11,8 +11,8 @@
   "optionsTitle": {
     "message": "PreTab"
   },
-  "optionsDesc": {
-    "message": "Configure o histórico em segundo plano e a fila."
+  "optionsDescription": {
+    "message": "Configure o histórico em segundo plano, atalhos de teclado e comportamento da fila."
   },
   "optMruTitle": {
     "message": "Última Guia Ativa (MRU)"

@@ -11,8 +11,8 @@
   "optionsTitle": {
     "message": "PreTab"
   },
-  "optionsDesc": {
-    "message": "Configure background history and queue behavior."
+  "optionsDescription": {
+    "message": "Configure background history, keyboard shortcuts, and queue behavior."
   },
   "optMruTitle": {
     "message": "Last Active Tab (MRU)"
