@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.2] - 2026-03-18
+
+### Changed
+- **Screenshot Refinement**: Centralized and localized demo data in `locales.json` for high-quality screenshots and promotional materials.
+
+## [1.6.1] - 2026-03-18
+
+### Changed
+- **UI Standardization**: Modernized options page UI with refined toggle switches to match the extension suite style.
+
 ## [1.6] - 2026-03-12
 
 ### Fixed
