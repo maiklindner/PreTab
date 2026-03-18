@@ -10,7 +10,13 @@
         "Your data stays 100% private. Fast, simple, and secure.",
         "PreTab"
       ],
-      "features": ["MRU Switching", "Smart Queue", "Privacy Focused"]
+      "features": ["MRU Switching", "Smart Queue", "Privacy Focused"],
+      "screenshotSamples": [],
+      "screenshotState": {
+        "mruEnabled": true,
+        "queueEnabled": true,
+        "tabHistory": [1, 2, 3, 4, 5]
+      }
     },
     "de": {
       "voice": "de-DE-Chirp3-HD-Enceladus",
@@ -22,7 +28,13 @@
         "Deine Daten bleiben 100% privat. Schnell, einfach und sicher.",
         "PreTab"
       ],
-      "features": ["Tab-Verlauf", "Smart Queue", "Privatsphäre"]
+      "features": ["Tab-Verlauf", "Smart Queue", "Privatsphäre"],
+      "screenshotSamples": [],
+      "screenshotState": {
+        "mruEnabled": true,
+        "queueEnabled": true,
+        "tabHistory": [1, 2, 3, 4, 5]
+      }
     },
     "ja": {
       "voice": "ja-JP-Chirp3-HD-Enceladus",
@@ -34,7 +46,13 @@
         "100%プライベート。高速で安全。",
         "PreTab"
       ],
-      "features": ["MRU切り替え", "スマートキュー", "プライバシー重視"]
+      "features": ["MRU切り替え", "スマートキュー", "プライバシー重視"],
+      "screenshotSamples": [],
+      "screenshotState": {
+        "mruEnabled": true,
+        "queueEnabled": true,
+        "tabHistory": [1, 2, 3, 4, 5]
+      }
     },
     "es": {
       "voice": "es-ES-Chirp3-HD-Enceladus",
@@ -46,7 +64,13 @@
         "Tus datos son 100% privados. Rápido, sencillo y seguro.",
         "PreTab"
       ],
-      "features": ["Cambio MRU", "Cola Inteligente", "Privacidad"]
+      "features": ["Cambio MRU", "Cola Inteligente", "Privacidad"],
+      "screenshotSamples": [],
+      "screenshotState": {
+        "mruEnabled": true,
+        "queueEnabled": true,
+        "tabHistory": [1, 2, 3, 4, 5]
+      }
     },
     "fr": {
       "voice": "fr-FR-Chirp3-HD-Enceladus",
@@ -58,7 +82,13 @@
         "Vos données restent 100% privées. Rapide, simple et sécurisé.",
         "PreTab"
       ],
-      "features": ["Changement MRU", "File d'attente", "Confidentialité"]
+      "features": ["Changement MRU", "File d'attente", "Confidentialité"],
+      "screenshotSamples": [],
+      "screenshotState": {
+        "mruEnabled": true,
+        "queueEnabled": true,
+        "tabHistory": [1, 2, 3, 4, 5]
+      }
     },
     "pt_BR": {
       "voice": "pt-BR-Chirp3-HD-Enceladus",
@@ -70,7 +100,13 @@
         "Seus dados permanecem 100% privados. Rápido, simples e seguro.",
         "PreTab"
       ],
-      "features": ["Alternância MRU", "Fila Inteligente", "Privacidade"]
+      "features": ["Alternância MRU", "Fila Inteligente", "Privacidade"],
+      "screenshotSamples": [],
+      "screenshotState": {
+        "mruEnabled": true,
+        "queueEnabled": true,
+        "tabHistory": [1, 2, 3, 4, 5]
+      }
     },
     "zh_CN": {
       "voice": "cmn-CN-Chirp3-HD-Enceladus",
@@ -82,7 +118,13 @@
         "100% 私密。极速且安全。",
         "PreTab"
       ],
-      "features": ["MRU 切换", "智能队列", "隐私保护"]
+      "features": ["MRU 切换", "智能队列", "隐私保护"],
+      "screenshotSamples": [],
+      "screenshotState": {
+        "mruEnabled": true,
+        "queueEnabled": true,
+        "tabHistory": [1, 2, 3, 4, 5]
+      }
     }
   }
 }
